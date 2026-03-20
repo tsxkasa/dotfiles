@@ -1,0 +1,28 @@
+{
+  "calculator": {
+    "enabled": true,
+    "trigger": "=",
+    "noTrigger": true
+  },
+  "dankActions": {
+    "enabled": true
+  },
+  "dankHooks": {
+    "enabled": true
+  },
+  "dankPomodoroTimer": {
+    "enabled": true
+  },
+  "wallpaperDiscovery": {
+    "enabled": false
+  },
+  "wallpaperBing": {
+    "enabled": false
+  },
+  "mediaPlayer": {
+    "enabled": false
+  },
+  "dankHyprlandWindows": {
+    "enabled": true
+  }
+}
