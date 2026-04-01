@@ -5,13 +5,7 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       diagnostics = { virtual_text = { prefix = "icons" } },
-      capabilities = {
-        workspace = {
-          didChangeWatchedFiles = {
-            dynamicRegistration = false,
-          },
-        },
-      },
+
       servers = {
         qmlls = {
           cmd = { "qmlls6" },
