@@ -47,6 +47,8 @@ waves = 0
 # 100 = normal gravity, 150 = faster fall, 50 = slower fall
 gravity = 120
 
+integrals = 80
+
 [eq]
 # Equalizer settings for frequency response
 # Lower frequencies tend to be louder, so reduce them slightly

@@ -14,7 +14,7 @@ prepend_preloaders = [
   { mime = "application/ms-opentype", run = "font-sample" },
   { name = "*.{otf,ttf,woff,woff2}", run = "font-sample" },
   # 3d objects
-  { url = "*.{3mf,obj,pts,ply,stl,step,stp}", run="f3d-preview"},
+  { url = "*.{3mf,obj,pts,ply,stl,step,stp}", run = "f3d-preview" },
 ]
 prepend_previewers = [
   # Replace magick, image, video with mediainfo
@@ -27,13 +27,13 @@ prepend_previewers = [
   { mime = "application/ms-opentype", run = "font-sample" },
   { name = "*.{otf,ttf,woff,woff2}", run = "font-sample" },
   # 3d objects
-  { url = "*.{3mf,obj,pts,ply,stl,step,stp}", run="f3d-preview"},
-  # Binaries
-  { name = "*.{bin,exe,dll}", run = "hevi" },
+  { url = "*.{3mf,obj,pts,ply,stl,step,stp}", run = "f3d-preview" },
   # Audio metadata
   { mime = "audio/*", run = "exifaudio" },
   # Markdown
   { name = "*.md", run = "mdcat" },
+  # Binaries
+  { name = "*", run = "hevi" },
 ]
 # There are more extensions which are supported by mediainfo.
 # Just add file's MIME type to `previewers`, `preloaders` above.
@@ -43,7 +43,7 @@ prepend_previewers = [
 # you may need to increase the memory limit if no image is rendered.
 # https://yazi-rs.github.io/docs/configuration/yazi#tasks
 [tasks]
-image_alloc = 1073741824  # = 1024*1024*1024 = 1024MB
+image_alloc = 1073741824 # = 1024*1024*1024 = 1024MB
 
 [spot]
 # Section header style.
@@ -54,14 +54,10 @@ title = { fg = "green" }
 tbl_col = { fg = "blue" }
 
 [opener]
-edit = [
-  { run = 'nvim "$@"', block = true },
-]
+edit = [{ run = 'nvim "$@"', block = true }]
 open = [{ run = 'xdg-open "$@"', desc = "Open", for = "unix" }]
 extract = [
   { run = 'ya pub extract --list "$@"', desc = "Extract here", for = "unix" },
   { run = "ya pub extract --list %*", desc = "Extract here", for = "windows" },
 ]
-play = [
-  { run = 'mpv "$@"', orphan = true, for = "unix" },
-]
+play = [{ run = 'mpv "$@"', orphan = true, for = "unix" }]

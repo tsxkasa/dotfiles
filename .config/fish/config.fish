@@ -35,3 +35,5 @@ zoxide init fish | source
 
 # pyenv
 pyenv init - fish | source
+
+direnv hook fish | source
