@@ -12,7 +12,7 @@ prepend_preloaders = [
   # Fonts
   { mime = "font/*", run = "font-sample" },
   { mime = "application/ms-opentype", run = "font-sample" },
-  { name = "*.{otf,ttf,woff,woff2}", run = "font-sample" },
+  { url = "*.{otf,ttf,woff,woff2}", run = "font-sample" },
   # 3d objects
   { url = "*.{3mf,obj,pts,ply,stl,step,stp}", run = "f3d-preview" },
 ]
@@ -25,15 +25,15 @@ prepend_previewers = [
   # Fonts
   { mime = "font/*", run = "font-sample" },
   { mime = "application/ms-opentype", run = "font-sample" },
-  { name = "*.{otf,ttf,woff,woff2}", run = "font-sample" },
+  { url = "*.{otf,ttf,woff,woff2}", run = "font-sample" },
   # 3d objects
   { url = "*.{3mf,obj,pts,ply,stl,step,stp}", run = "f3d-preview" },
   # Audio metadata
   { mime = "audio/*", run = "exifaudio" },
   # Markdown
-  { name = "*.md", run = "mdcat" },
+  { url = "*.md", run = "mdcat" },
   # Binaries
-  { name = "*", run = "hevi" },
+  # { url = "*", run = "hevi" },
 ]
 # There are more extensions which are supported by mediainfo.
 # Just add file's MIME type to `previewers`, `preloaders` above.
